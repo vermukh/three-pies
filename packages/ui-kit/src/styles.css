@@ -1,0 +1,359 @@
+@import "./tokens.css";
+
+.ui-button,
+.ui-icon-button,
+.ui-input,
+.ui-badge,
+.ui-alert,
+.ui-card,
+.ui-table,
+.ui-field,
+.ui-dialog,
+.ui-quantity {
+  font-family: var(--ui-font-body);
+  box-sizing: border-box;
+}
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: var(--ui-control-height);
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--ui-radius-sm);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.ui-button--primary {
+  background: var(--ui-color-primary);
+  color: var(--ui-color-on-primary);
+}
+.ui-button--primary:hover {
+  background: var(--ui-color-primary-hover);
+}
+.ui-button--secondary {
+  background: var(--ui-color-surface);
+  color: var(--ui-color-primary);
+  border-color: var(--ui-color-border);
+}
+.ui-button--ghost {
+  background: transparent;
+  color: var(--ui-color-primary);
+}
+.ui-button--danger {
+  background: var(--ui-color-danger);
+  color: white;
+}
+.ui-button--small {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+.ui-button:disabled,
+.ui-icon-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ui-button:focus-visible,
+.ui-icon-button:focus-visible,
+.ui-table-scroll:focus-visible,
+.ui-quantity button:focus-visible {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: 3px;
+}
+.ui-icon-button {
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ui-color-muted);
+  cursor: pointer;
+}
+.ui-icon-button:hover {
+  background: var(--ui-color-surface);
+}
+.ui-input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #cbbcab;
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-color-canvas);
+  color: var(--ui-color-text);
+  padding: 11px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ui-input:focus {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: 2px;
+}
+.ui-input:disabled {
+  background: var(--ui-color-surface);
+  color: var(--ui-color-muted);
+  cursor: not-allowed;
+}
+.ui-input[aria-invalid="true"] {
+  border-color: var(--ui-color-danger);
+}
+.ui-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.ui-field label {
+  display: block;
+  color: var(--ui-color-text);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.ui-field-hint,
+.ui-field-error {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 7px 0 0;
+}
+.ui-field-hint {
+  color: var(--ui-color-muted);
+}
+.ui-field-error {
+  color: var(--ui-color-danger);
+}
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: var(--ui-radius-sm);
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.ui-tone-neutral {
+  background: var(--ui-color-surface);
+  color: var(--ui-color-muted);
+}
+.ui-tone-success {
+  background: var(--ui-color-success-bg);
+  color: var(--ui-color-success);
+}
+.ui-tone-warning {
+  background: var(--ui-color-warning-bg);
+  color: var(--ui-color-warning);
+}
+.ui-tone-danger {
+  background: var(--ui-color-danger-bg);
+  color: var(--ui-color-danger);
+}
+.ui-alert {
+  padding: 16px;
+  border-radius: var(--ui-radius-md);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ui-card {
+  padding: 24px;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-color-canvas);
+}
+.ui-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+}
+.ui-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  color: var(--ui-color-text);
+}
+.ui-table th {
+  background: var(--ui-color-surface);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ui-color-muted);
+}
+.ui-table th,
+.ui-table td {
+  padding: 15px 18px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--ui-color-border);
+}
+.ui-table tbody tr:last-child td {
+  border: none;
+}
+.ui-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ui-quantity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 128px;
+  height: 44px;
+  background: var(--ui-color-surface);
+  color: var(--ui-color-primary);
+  border-radius: var(--ui-radius-sm);
+}
+.ui-quantity button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+}
+.ui-quantity button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.ui-quantity span {
+  text-align: center;
+  min-width: 32px;
+}
+.ui-dialog {
+  position: fixed;
+  width: min(560px, calc(100% - 40px));
+  max-height: 90dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 28px;
+  border: none;
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-color-canvas);
+  color: var(--ui-color-text);
+  box-shadow: var(--ui-shadow-dialog);
+}
+.ui-dialog::backdrop {
+  background: #30251f70;
+  backdrop-filter: blur(4px);
+}
+.ui-dialog--wide {
+  width: min(870px, calc(100% - 40px));
+}
+.ui-dialog--drawer {
+  left: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 480px;
+  max-width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  border-radius: 0;
+}
+.ui-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.ui-dialog-header h2 {
+  font-family: var(--ui-font-display);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+.ui-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: ui-spin 0.8s linear infinite;
+}
+@keyframes ui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .ui-dialog {
+    inset: var(--dialog-top, 0px) 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    height: var(--dialog-height, 100dvh);
+    max-height: var(--dialog-height, 100dvh);
+    border-radius: 0;
+    padding: 0 20px max(24px, env(safe-area-inset-bottom));
+    scroll-padding-top: 90px;
+  }
+  .ui-dialog-header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    padding: 16px 0;
+    background: var(--ui-color-canvas);
+    border-bottom: 1px solid var(--ui-color-border);
+  }
+  .ui-dialog-header h2 {
+    font-size: 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-button,
+  .ui-spinner {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Mobile forms use the root scroller so Safari owns keyboard positioning.
+   The portal remains visible while the underlying application is out of flow. */
+html[data-ui-page-dialog] {
+  scroll-behavior: auto;
+  scroll-padding-block: 90px 24px;
+  background: var(--ui-color-canvas);
+}
+html[data-ui-page-dialog] body {
+  padding: 0;
+  background: var(--ui-color-canvas);
+}
+html[data-ui-page-dialog] body > :not([data-page-dialog]) {
+  display: none;
+}
+.ui-dialog[data-page-dialog] {
+  position: static;
+  inset: auto;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0 max(20px, env(safe-area-inset-left))
+    max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-right));
+  overflow: visible;
+  border-radius: 0;
+  box-shadow: none;
+  animation: none;
+}
+.ui-dialog[data-page-dialog] .ui-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 17px 0 15px;
+  background: var(--ui-color-canvas);
+  border-bottom: 1px solid var(--ui-color-border);
+}
+.ui-dialog[data-page-dialog] :is(input, textarea) {
+  font-size: 16px;
+  scroll-margin-block: 12px;
+}

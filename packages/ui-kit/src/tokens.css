@@ -1,0 +1,32 @@
+:root {
+  --ui-color-canvas: #fffcf7;
+  --ui-color-surface: #f4ede2;
+  --ui-color-primary: #852c32;
+  --ui-color-primary-hover: #6e2028;
+  --ui-color-on-primary: #fffaf2;
+  --ui-color-text: #322e29;
+  --ui-color-muted: #766b60;
+  --ui-color-border: #e9e1d5;
+  --ui-color-gold: #b48c50;
+  --ui-color-focus: #852c32;
+  --ui-color-success: #426345;
+  --ui-color-success-bg: #eaf0e5;
+  --ui-color-warning: #785620;
+  --ui-color-warning-bg: #f7ecd6;
+  --ui-color-danger: #9b2733;
+  --ui-color-danger-bg: #f8e5e5;
+  --ui-font-body: "Golos Text Variable", Arial, sans-serif;
+  --ui-font-display: Georgia, "Times New Roman", serif;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-5: 24px;
+  --ui-space-6: 32px;
+  --ui-space-7: 48px;
+  --ui-radius-sm: 4px;
+  --ui-radius-md: 8px;
+  --ui-radius-lg: 12px;
+  --ui-control-height: 44px;
+  --ui-shadow-dialog: 0 25px 100px #24180f30;
+}

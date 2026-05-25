@@ -1,0 +1,31 @@
+{
+  "name": "three-pies",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "client",
+    "packages/ui-kit"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=three-pies-client",
+    "build": "npm run build --workspace=three-pies-client",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:e2e": "playwright test --project=chromium",
+    "test:e2e:webkit": "playwright test --project=webkit",
+    "test:unit": "node --experimental-strip-types --test tests/cart.test.mjs",
+    "audit:prod": "npm audit --omit=dev"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "^1.62.1",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.7.0",
+    "prettier": "3.9.6",
+    "typescript-eslint": "8.65.0"
+  }
+}
